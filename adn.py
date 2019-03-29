@@ -47,13 +47,35 @@ def generar_cadena_complementaria(adn):
 
 
 def calcular_correspondencia(adn1, adn2):
-    # retorna num
-    pass
+    """
+    >>> calcular_correspondencia('CATG','GTAC')
+    100.0
 
+    >>> calcular_correspondencia('CAT','GAA')
+    66.66666666
+
+    >>> calcular_correspondencia('TTT','GGG')
+    0.0
+
+    :param adn1:
+    :param adn2:
+    :return:
+    """
+    if generar_cadena_complementaria(adn1)==adn2:
+        return 100.0
 
 def corresponden(adn1, adn2):
-    # retorna Bool
-    pass
+    '''
+    >>> corresponden('ATTT','TAAA')
+    True
+    >>> corresponden('TATATATAT','GAGAGAGA')
+    False
+
+    :param adn1:
+    :param adn2:
+    :return:
+    '''
+    return generar_cadena_complementaria(adn1) == adn2
 
 
 def es_cadena_valida(adn):
@@ -78,9 +100,10 @@ def es_cadena_valida(adn):
 
 def es_base(caracter):
     """
-    >>> es_base('K')
-    False
-
+    >>> es_base('KK')
+    Traceback (most recent call last):
+    ..
+    ValueError: ('KK', 'No es base')
     >>> es_base('G')
     True
 
@@ -97,13 +120,19 @@ def es_base(caracter):
 
 def es_subcadena(adn1, adn2):
     """
+    >>> es_subcadena('GGATA','ATA')
+    True
+
+    >>> es_subcadena('TTTAAA','GCGC')
+    False
 
     :param adn1:
     :param adn2:
     :return:
     """
-
-
+    if es_cadena_valida(adn1) and es_cadena_valida(adn2):
+        return adn2 in adn1
+    raise ValueError(adn2, 'No es subcadena')
 
 def reparar_dano(adn, base):
     pass
