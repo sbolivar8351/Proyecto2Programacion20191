@@ -1,0 +1,35 @@
+from unittest import TestCase
+
+
+class TestObtener_complemento(TestCase):
+    def test_obtener_complemento(self):
+        self.fail()
+
+class TestGenerar_cadena_complementaria(TestCase):
+    def test_generar_cadena_complementaria(self):
+        self.fail()
+
+class TestCalcular_correspondencia(TestCase):
+    def test_calcular_correspondencia(self):
+        self.fail()
+class TestCorresponden(TestCase):
+    def test_corresponden(self):
+        self.fail()
+class TestEs_cadena_valida(TestCase):
+    def test_es_cadena_valida(self):
+        self.fail()
+class TestEs_base(TestCase):
+    def test_es_base(self):
+        self.fail()
+class TestEs_subcadena(TestCase):
+    def test_es_subcadena(self):
+        self.fail()
+class TestReparar_dano(TestCase):
+    def test_reparar_dano(self):
+        self.fail()
+class TestObtener_secciones(TestCase):
+    def test_obtener_secciones(self):
+        self.fail()
+class TestObtener_complementos(TestCase):
+    def test_obtener_complementos(self):
+        self.fail()
