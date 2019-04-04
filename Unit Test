@@ -1,4 +1,5 @@
 from unittest import TestCase
+import 
 
 
 
@@ -21,17 +22,24 @@ class TestGenerar_cadena_complementaria(self):
     self.assertEqual(cadena_complementaria(GTGT), CACA)
     self.assertEqual(obtener_complemento(0), 0)
 
-class TestCalcular_correspondencia(TestCase):
+class TestCalcular_correspondencia(self):
     def test_calcular_correspondencia(self):
-        self.fail()
+    self.assertEqual(correspondencia(CATG,GTAC), 100.0 )
+    self.assertEqual(correspondencia(0), 0)    
         
-class TestCorresponden(TestCase):
-    def test_corresponden(self):
-        self.fail()
+class TestCorresponden(self):
+    def test_corresponden(self): 
+    self.assertEqual(corresponden(TATA), ATAT)
+    self.assertEqual(corresponden(0), 0)  
+    self.assertEqual(corresponden(CGCG), GCGC)
+    self.assertEqual(corresponden(0), 0)  
         
-class TestEs_cadena_valida(TestCase):
+class TestEs_cadena_valida(self):
     def test_es_cadena_valida(self):
-        self.fail()
+    def assertIsTrue(self, value):
+    self.assertIs(value, True)
+    def assertIsFalse(self, value):
+    self.assertIs(value, False)
         
 class TestEs_base(TestCase):
     def test_es_base(self):
